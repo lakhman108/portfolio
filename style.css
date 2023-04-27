@@ -89,13 +89,15 @@ body{
     animation: slideTop 1s ease forwards;
     animation-delay: .7s;
 }
-.home-image img {
+.home-img {
     
-   max-width: 450px;
+ 
    margin-right: -20px;
    
-    animation: ZoomIn 1s ease forwards;
+    animation: ZoomIn 3s ease forwards;
+   
     animation-delay: 2s ;
+    
     
 }
 .social-media a {
