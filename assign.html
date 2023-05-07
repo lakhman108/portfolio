@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+    .font{
+        font-size: 18px;
+    }
+.accordion {
+   
+  background-color: #1f242d;
+  color: #0ef;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 25px;
+  transition: 0.4s;
+}
+.active, .accordion:hover {
+background-color: #1f242d;
+}
+
+.panel {
+   
+padding: 0 18px;
+display: none;
+background-color: #0ef;
+overflow: hidden;
+}
+</style>
+
+</head>
+<body>
+<h2>Startup Ideas</h2>
+<div class="font">
+    <button class="accordion">EcoSwap</button>
+
+<div class="panel">
+  <p>EcoSwap is a platform where users can trade or donate their unused items to reduce waste and promote sustainability.</p>
+</div>
+<button class="accordion">SmartChef</button>
+
+<div class="panel">
+  <p>SmartChef is an AI-powered cooking assistant that suggests recipes based on ingredients available at home and dietary preferences.</p>
+</div>
+<button class="accordion">FitTogether</button>
+<div class="panel">
+  <p>FitTogether is a social network for fitness enthusiasts where users can connect with workout buddies, share progress, and join challenges.</p>
+</div>
+</div>
+<script>
+var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var panel = this.nextElementSibling;
+    if (panel.style.display === "block") {
+      panel.style.display = "none";
+    } else {
+      panel.style.display = "block";
+    }
+  });
+}
+</script>
+</body>
+</html>

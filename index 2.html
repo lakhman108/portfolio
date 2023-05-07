@@ -1,0 +1,44 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to travel form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="continer"><h1>Welcome to travel form</h1><br>
+    <p>enter your detalis to conform your participations</p>
+    <form action="first.php" method="post">
+        <label for="name">Name:</label><br>
+                <input type="text" name="name" id="name" placeholder="enter your name" ><br><br>
+        <label for="age">Age:</label><br>   
+               <input type="number" name="age" id="age" placeholder="enter your age" ><br><br>
+        <label for="gender">Gender:</label>
+       
+        <div style="padding-left: 50px;">
+            <input type="radio" id="male" name="gender" value="male">
+            <label for="male">Male</label><br>
+            <input type="radio" id="female" name="gender" value="female">
+            <label for="female">Female</label><br>
+            <input type="radio" id="ok" name="gender" value="ok">
+            <label for="ok">Rather Not to Say</label><br>
+            
+        </div>
+        <br>
+        <label for="email">Mail:</label>
+            <input type="email" name="email" id="email" placeholder=".....@gmail.com"><br>
+<label for="number">phone:</label>
+<input type="number" name="phone" id="phone" placeholder="enter your phone number"><br>
+<label for="other">Description:</label>
+        <div style="padding-left: 90px;"><textarea name="other" id="other" cols="30" rows="10" placeholder="Enter any other information"></textarea></div>
+        <br>
+        <button type="submit">Submit</button>
+        <button type="reset" style="margin-left: 20px;">Reset</button>
+
+    </form>
+   
+</div>
+<script src="index.js"></script>
+</body>
+</html>
