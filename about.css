@@ -1,0 +1,79 @@
+.light-theme {
+    background-color: #fff;
+    color: #000;
+  }
+  body {
+    background-color: #1f242d;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #0ef;
+  }
+  h1 {
+    font-size: 64px;
+  }
+  p {
+    font-size: 16px;
+  }
+  label {
+    font-size: 30px;
+  }
+  fieldset {
+    border-radius: 25px;
+    text-align: left;
+    margin: auto;
+    width: 50%;
+    padding: 20px;
+    justify-content: left;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    box-shadow: 1px 1px 10px #0ef;
+  }
+  .ok {
+    font-size: 40px;
+  }
+  form label[for='1star'],
+  form label[for='2star'],
+  form label[for='3star'],
+  form label[for='4star'],
+  form label[for='5star'] {
+    font-size: 40px;
+  }
+  label {
+    font-size: inherit;
+  }
+  input[type='radio'] {
+    transform: scale(1.5);
+  }
+  input[type='text'],
+  input[type='number'],
+  input[type='email'],
+  textarea {
+    border-radius: 10px;
+    width: 100%;
+    max-width: 300px;
+    font-size: 24px;
+  }
+  input[type='radio'] {
+    position: relative;
+    left: -2px;
+    top: -8px;
+  }
+  button {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    width: 15%;
+    height: 30px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
+      'Lucida Sans', Arial, sans-serif;
+    font-size: 24px;
+    color: rgb(0, 238, 255);
+    background-color: #1f242d;
+  }
+  form label {
+    font-size: 30px;
+  }
+  form {
+    text-align: center;
+    font-size: 28px;
+  }
