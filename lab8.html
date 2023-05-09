@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>My Achievements and Academics</title>
+	<style>
+		body {
+			margin: 0;
+			padding: 0;
+			font-family: Arial, Helvetica, sans-serif;
+			font-size: 16px;
+			line-height: 1.5;
+		}
+		header {
+			background-color: #007bff;
+			color: #fff;
+			padding: 20px;
+			text-align: center;
+		}
+		.container {
+			max-width: 1200px;
+			margin: 0 auto;
+			padding: 20px;
+		}
+		.section-heading {
+			font-size: 32px;
+			font-weight: bold;
+			text-align: center;
+			margin-bottom: 30px;
+		}
+		.achievement {
+			margin-bottom: 30px;
+			padding: 20px;
+			background-color: #f2f2f2;
+			border-radius: 10px;
+			box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+		}
+		.achievement-badge {
+			float: left;
+			margin-right: 20px;
+			border-radius: 50%;
+			width: 100px;
+			height: 100px;
+			background-color: #007bff;
+			color: #fff;
+			font-size: 48px;
+			line-height: 100px;
+			text-align: center;
+			box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+		}
+		.achievement-details {
+			overflow: hidden;
+		}
+		.achievement-title {
+			font-size: 24px;
+			font-weight: bold;
+			margin-bottom: 10px;
+		}
+		.achievement-description {
+			font-size: 16px;
+			margin-bottom: 10px;
+		}
+		.academic {
+			margin-bottom: 30px;
+			padding: 20px;
+			background-color: #fff;
+			border-radius: 10px;
+			box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+		}
+		.academic-subject {
+			font-size: 24px;
+			font-weight: bold;
+			margin-bottom: 10px;
+		}
+		.academic-topic {
+			font-size: 16px;
+			margin-bottom: 10px;
+		}
+		.pagination {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			margin-top: 30px;
+		}
+		.pagination-button {
+			background-color: #007bff;
+			color: #fff;
+			padding: 10px 20px;
+			border: none;
+			border-radius: 5px;
+			cursor: pointer;
+			margin: 0 10px;
+		}
+		.top-button {
+			position: fixed;
+			bottom: 20px;
+			right: 20px;
+			display: none;
+			width: 50px;
+			height: 50px;
+			border-radius: 50%;
+			background-color: #007bff;
+			color: #fff;
+			font-size: 24px;
+			line-height: 50px;
+            align: center;
+		box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+		z-index: 999;
+	}
+	.top-button:hover {
+		background-color: #0062cc;
+		color: #fff;
+	}
+	@media screen and (max-width: 767px) {
+		.section-heading {
+			font-size: 24px;
+		}
+		.achievement-badge {
+			margin-right: 10px;
+			width: 50px;
+			height: 50px;
+			font-size: 24px;
+			line-height: 50px;
+		}
+		.achievement-title {
+			font-size: 18px;
+		}
+		.achievement-description {
+			font-size: 14px;
+		}
+		.academic-subject {
+			font-size: 20px;
+		}
+		.academic-topic {
+			font-size: 14px;
+		}
+		.top-button {
+			font-size: 16px;
+			width: 40px;
+			height: 40px;
+			line-height: 40px;
+		}
+	}
+</style>
+</head>
+<body>
+	<header>
+		<h1>My Achievements and Academics</h1>
+	</header>
+	<div class="container">
+		<h2 class="section-heading">My Achievements</h2>
+		<div class="achievement">
+			<div class="achievement-badge">1</div>
+			<div class="achievement-details">
+				<div class="achievement-title">First Place in National Science Olympiad</div>
+				<div class="achievement-description">I won the first place in the National Science Olympiad in the Physics category in 2019.</div>
+				<div class="achievement-membership">Membership: National Science Olympiad</div>
+			</div>
+		</div>
+		<div class="achievement">
+			<div class="achievement-badge">2</div>
+			<div class="achievement-details">
+				<div class="achievement-title">Second Place in National Mathematics Competition</div>
+				<div class="achievement-description">I won the second place in the National Mathematics Competition in 2020.</div>
+				<div class="achievement-membership">Membership: National Mathematics Competition</div>
+			</div>
+		</div>
+		<h2 class="section-heading">My Academics</h2>
+		<div class="academic">
+			<div class="academic-subject">Mathematics</div>
+			<div class="academic-topic">Algebra</div>
+			<div class="academic-solution">Solution: 2x + 3 = 7</div>
+		</div>
+		<div class="academic">
+			<div class="academic-subject">Physics</div>
+			<div class="academic-topic">Mechanics</div>
+			<div class="academic-solution">Solution: F = ma</div>
+		</div>
+		<div class="pagination">
+			<button class="pagination-button">1</button>
+			<button class="pagination-button">2</button>
+			<button class="pagination-button">3</button>
+		</div>
+		<button class="top-button" onclick="scrollToTop()">Top</button>
+	</div>
+	<script>
+		// Add top button functionality
+		window.onscroll = function() {showTopButton()};
+		function showTopButton() {
+			if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+				document.querySelector('.top-button').style.display = "block";
+} else {
+document.querySelector('.top-button').style.display = "none";
+}
+}
+function scrollToTop() {
+document.body.scrollTop = 0;
+document.documentElement.scrollTop = 0;
+}
+// Add pagination functionality
+let currentPage = 1;
+let itemsPerPage = 2;
+let items = document.querySelectorAll('.achievement, .academic');
+let numPages = Math.ceil(items.length / itemsPerPage);
+let paginationContainer = document.querySelector('.pagination');
+for (let i = 1; i <= numPages; i++) {
+let button = document.createElement('button');
+button.classList.add('pagination-button');
+button.innerHTML = i;
+button.addEventListener('click', function() {
+currentPage = i;
+displayItems();
+});
+paginationContainer.appendChild(button);
+}
+function displayItems() {
+for (let i = 0; i < items.length; i++) {
+items[i].style.display = "none";
+}
+let startIndex = (currentPage - 1) * itemsPerPage;
+let endIndex = startIndex + itemsPerPage;
+let pageItems = Array.from(items).slice(startIndex, endIndex);
+for (let i = 0; i < pageItems.length; i++) {
+pageItems[i].style.display = "block";
+}
+}
+displayItems();
+</script>
+
+</body>
+</html>

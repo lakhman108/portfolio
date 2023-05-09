@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Feedback Form</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- External CSS file -->
+	
+</head>
+<style>
+    /* Form styles */
+form {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f2f2f2;
+  border-radius: 5px;
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+}
+
+input[type=text], input[type=email], textarea {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+}
+
+input[type=submit] {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+/* Error message styles */
+.error {
+  color: red;
+  font-size: 12px;
+}
+
+/* Success message styles */
+.success {
+  color: green;
+  font-size: 12px;
+}
+
+</style>
+<body>
+	<h1>Feedback Form</h1>
+	<!-- Basic Feedback Form -->
+	<form method="get" action="basic-feedback.php">
+		<label for="name">Name:</label>
+		<input type="text" id="name" name="name" required>
+		<br>
+		<label for="email">Email:</label>
+		<input type="email" id="email" name="email" required>
+		<br>
+		<label for="rating">Rating:</label>
+		<input type="number" id="rating" name="rating" min="1" max="5" required>
+		<br>
+		<label for="feedback">Feedback:</label>
+		<textarea id="feedback" name="feedback" required></textarea>
+		<br>
+		<input type="submit" value="Submit">
+	</form>
+	<hr>
+	<!-- Rich Feedback Form with Contact Me page -->
+	<form method="post" action="contact-me.php">
+		<label for="name">Name:</label>
+		<input type="text" id="name" name="name" required>
+		<br>
+		<label for="email">Email:</label>
+		<input type="email" id="email" name="email" required>
+		<br>
+		<label for="phone">Phone:</label>
+		<input type="tel" id="phone" name="phone" pattern="[0-9]{10}" required>
+		<br>
+		<label for="subject">Subject:</label>
+		<input type="text" id="subject" name="subject" required>
+		<br>
+		<label for="message">Message:</label>
+		<textarea id="message" name="message" required></textarea>
+		<br>
+		<input type="submit" value="Submit">
+	</form>
+	<hr>
+	<!-- Anonymous Feedback Form -->
+	<form method="post" action="anonymous-feedback.php">
+		<label for="feedback">Feedback:</label>
+		<textarea id="feedback" name="feedback" required></textarea>
+		<br>
+		<label for="anonymous">Provide Feedback Anonymously:</label>
+		<input type="checkbox" id="anonymous" name="anonymous">
+		<br>
+		<input type="submit" value="Submit">
+	</form>
+	<!-- External JavaScript file -->
+	<script>
+        // Form validation
+function validateForm() {
+  let nameInput = document.forms["feedbackForm"]["name"].value;
+  let emailInput = document.forms["feedbackForm"]["email"].value;
+  let messageInput = document.forms["feedbackForm"]["message"].value;
+  
+  // Check if required fields are filled in
+  if (nameInput == "" || emailInput == "" || messageInput == "") {
+    alert("Please fill in all required fields.");
+    return false;
+  }
+  
+  // Check email format
+  let emailRegex = /\S+@\S+\.\S+/;
+  if (!emailRegex.test(emailInput)) {
+    alert("Please enter a valid email address.");
+    return false;
+  }
+  
+  // If all fields are valid, display success message
+  alert("Thank you for your feedback!");
+  return true;
+}
+
+    </script>
+
+</body>
+</html>

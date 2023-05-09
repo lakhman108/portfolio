@@ -3,6 +3,10 @@
 <head>
 	<title>My Single Page Application</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="theme.css">
+    <link rel="stylesheet" href="navbar.css">
+    <link rel="stylesheet" href="about.css">
+   
 	<style>
 		/* Define the styles for the cards */
 		.card {
@@ -14,7 +18,8 @@
 			border: 1px solid #ccc;
 			border-radius: 5px;
 			box-shadow: 0 2px 5px rgba(91, 171, 127, 0.3);
-			background-color: #fff;
+			background-color: #1f242d;
+			color: #fff;
 			min-height: 200px;
 			min-width: 300px;
 		}
@@ -46,20 +51,26 @@
 			width: 100%;
 			border: none;
 			text-align: left;
+
 			outline: none;
-			font-size: 25px;
+			font-size: 30px;
 			transition: 0.4s;
 		}
 		.active, .accordion:hover {
 			background-color: #1f242d;
 		}
 		.panel {
-			padding: 0 18px;
+			padding:8px;
+			
 			display: none;
-			background-color: #0ef;
+			background-color: #1f242d;
 			overflow: hidden;
 		}
-   
+   p {
+	padding: 0 18px;
+	font-size: 20px;
+   }
+	
 	</style>
 </head>
 <body>
@@ -72,16 +83,16 @@
 	</div>
 	<section id="home">
 		<div class="card">
-            <h2>Welcome to My SPA</h2>
-            <p>Welcome to Parmar Lakhman's SPA, where you can relax and rejuvenate.</p>
-            <p>I am a current 2nd-semester student at Dud Nadiad studying Computer Engineering.</p>
+            <h2>Welcome to My website</h2>
+            <p>Welcome to Parmar Lakhman's website</p>
+            <p>I am a currently 2nd-semester student at Dud Nadiad studying Computer Engineering.</p>
           </div>
           
 	</section>
 	<section id="about">
 		<div class="card">
             <h2>About Us</h2>
-            <p>At Parmar Lakhman's SPA, we believe in providing high-quality services to our clients.</p>
+            <p>At Our website, we believe in providing high-quality services to our clients.</p>
             <p>Our team consists of experienced professionals who are dedicated to ensuring your complete satisfaction.</p>
           </div>
         </section>
@@ -89,33 +100,91 @@
 <div class="card">
         <div class="card">
             <h2>Our Services</h2>
-            <p>At Parmar Lakhman's SPA, we offer a wide range of services to help you feel your best.</p>
+            <p>At our website, we offer a wide range of services to help you feel your best.</p>
             <ul>
-              <li>Massage Therapy</li>
-              <li>Facials</li>
-              <li>Manicures and Pedicures</li>
-              <li>Hair Removal</li>
+              <li>Website Designing</li>
+              <li>API</li>
+              <li>Full Website Management </li>
+              <li>Website Developmentl</li>
             </ul>
           </div>
-        </selection>
-    <selection id="Contact">
-        <div class="card">
-            <h2>Contact Us</h2>
-            <p>If you have any questions or would like to book an appointment, please don't hesitate to contact us.</p>
-            <p>You can reach us at:</p>
-            <ul>
-              <li>Email: info@parmarlakhmanspa.com</li>
-              <li>Phone: 555-555-5555</li>
-              <li>Address: 123 Main Street, Dud Nadiad</li>
-            </ul>
-          </div>
+        </section>
+    <section id="contact">
+		<div class="card">
+			<h2>Contact Us</h2>
+			<p>If you have any questions or would like to book an appointment, please don't hesitate to contact us.</p>
+			<p>You can reach us at:</p>
+			<ul>
+			  <li>Email: info@parmarlakhmanspa.com</li>
+			  <li>Phone: 555-555-5555</li>
+			  <li>Address: 123 Main Street, Dud Nadiad</li>
+			</ul>
+		  </div>
+			<form  action="action_page.php"  method="post">
+				<h1 class="h1"><b>Feedback Form</b></h1>
+				<fieldset>
+					<div>
+						<label for="fname" >Name:</label>
+						<input type="text" id="fname" name="fname" placeholder="fname_lastname" ><br>
+					</div>
+					<br>
+					<div>
+						<label for="gender">Gender:</label>
+					</div>
+					<div style="padding-left: 50px;">
+						<input type="radio" id="male" name="gender" value="male">
+						<label for="male">Male</label><br>
+						<input type="radio" id="female" name="gender" value="female">
+						<label for="female">Female</label><br>
+						<input type="radio" id="ok" name="gender" value="ok">
+						<label for="ok">Rather Not to Say</label><br>
+					</div>
+					<br>
+					<div>
+						<label for="number">Mobile No:</label>
+						<input type="number" id="number" name="number" placeholder="Your Mobile Number" maxlength="10">
+					</div>
+					<div><br>
+						<label for="email">Email:</label>
+						<input type="email" id="email" name="email" placeholder="....@email.com">
+					</div><br>
+					<div>
+						<label for="feedback">Feedback:</label>
+						<textarea id="feedback" name="feedback" placeholder="Give your valuable feedback here"></textarea>
+					</div>
+					
+					<div >
+						<h3 class="ok">RATE US</h3>
+						<input type="radio" name="rating" id="1star"  value="1">
+						<label for="1star" >🙅‍♂️</label>
+						<input type="radio" name="rating" id="2star" value="2">
+						<label for="2star">🙍</label>
+						<input type="radio" name="rating" id="3star" value="3">
+						<label for="3star">🙂</label>
+						<input type="radio" name="rating" id="4star" value="4">
+						<label for="4star">🤩</label>
+						<input type="radio" name="rating" id="5star" value="5">
+						<label for="5star">🤯</label>
+		
+					</div>
+					
+		
+					<button type="submit" >Submit</button>
+					<button type="reset" style="margin-left: 20px;">Reset</button>
+				</fieldset>
+			</form>
+			
+			<div class="toggle-switch">
+			  <button id="my-theme-toggle" class="theme-toggle">Change Theme</button>
+		  </div>
+		  <script src="theme.js"></script>
           
-        </selection>
+        </section>
 	<section id="ideas">
 		<h2>Startup Ideas</h2>
 		<div class="font">
 			<button class="accordion">EcoSwap</button>
-			<div class="panel">
+			<div class="panel" >
 				<p>EcoSwap is a platform where users can trade or donate their unused items to reduce waste and promote sustainability.</p>
 			</div>
 			<button class="accordion">FitTogether</button>
@@ -123,6 +192,7 @@
 <p>FitTogether is a social network for fitness enthusiasts where users can connect with workout buddies, share progress, and join challenges.</p>
 </div>
 </div>
+</section>
 <br>
 <br><br>
 <footer style="align-items: center;">
