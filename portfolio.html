@@ -22,28 +22,44 @@
       </header>
       </div>
     <h1>this is some project</h1>
-   <div class="project">
-     <div class="card">
-        <img src="ok.jpg" alt="Avatar" style="width:100%">
-        <div >
-          <h4><b>click here to know your location</b></h4> 
-          <p>Architect & Engineer</p> 
+  <div>
+    <div class="card" class="project">
+       <img src="longitude lantitude project.png" alt="Avatar" style="width:100%">
+       <div >
+        <a  >  <h4>click here to know your<button onclick="getLocation()">location</button></h4> </a>
+        <p id="demo"></p>
+       </div>
+     </div>
+  
+      <div class="card" >
+        <img src="puzzel.jpg" alt="Avatar" style="width:100%">
+        <div>
+          <h4><b>Click Here to Play Puzzel</b></h4> 
         </div>
       </div>
-      <div class="card">
-        <img src="ok.jpg" alt="Avatar" style="width:100%">
-        <div >
-          <h4><b>John Doe</b></h4> 
-          <p>Architect & Engineer</p> 
-        </div>
-      </div>
-      <div class="card">
-        <img src="ok.jpg" alt="Avatar" style="width:100%">
-        <div >
-          <h4><b>John Doe</b></h4> 
-          <p>Architect & Engineer</p> 
-        </div>
-      </div>
+      
+  <a href="http://localhost/food2/homepage/home.php">    <div class="card">
+    <img src="hw poject.png" alt="Avatar" style="width:100%">
+    <div >
+      <h4><b>Food Token Management</b></h4> 
+    </div>
+  </div></a>
    </div>
+   <script>
+    var x = document.getElementById("demo");
+    
+    function getLocation() {
+      if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(showPosition);
+      } else { 
+        x.innerHTML = "Geolocation is not supported by this browser.";
+      }
+    }
+    
+    function showPosition(position) {
+      x.innerHTML = "Latitude: " + position.coords.latitude + 
+      "<br>Longitude: " + position.coords.longitude;
+    }
+    </script>
 </body>
 </html>

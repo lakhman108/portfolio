@@ -26,9 +26,7 @@
   </div>
   <br>
   <br><br>
-  
-  
-    <form  action="action_page.php"  method="post">
+     <form  action="action_page.php"  method="post">
         <h1 class="h1"><b>Feedback Form</b></h1>
         <fieldset>
             <div>
@@ -60,8 +58,7 @@
                 <label for="feedback">Feedback:</label>
                 <textarea id="feedback" name="feedback" placeholder="Give your valuable feedback here"></textarea>
             </div>
-            
-            <div >
+            <div>
                 <h3 class="ok">RATE US</h3>
                 <input type="radio" name="rating" id="1star"  value="1">
                 <label for="1star" >🙅‍♂️</label>
@@ -73,10 +70,7 @@
                 <label for="4star">🤩</label>
                 <input type="radio" name="rating" id="5star" value="5">
                 <label for="5star">🤯</label>
-
             </div>
-            
-
             <button type="submit" >Submit</button>
             <button type="reset" style="margin-left: 20px;">Reset</button>
         </fieldset>
@@ -86,6 +80,19 @@
       <button id="my-theme-toggle" class="theme-toggle">Change Theme</button>
   </div>
   <script src="theme.js"></script>
-
+<script>
+    var x = document.getElementById("demo");
+    function getLocation() {
+      if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(showPosition);
+      } else { 
+        x.innerHTML = "Geolocation is not supported by this browser.";
+      }
+    }
+    function showPosition(position) {
+      x.innerHTML = "Latitude: " + position.coords.latitude + 
+      "<br>Longitude: " + position.coords.longitude;
+    }
+    </script>
 </body>
 </html>

@@ -3,7 +3,8 @@ body{
     background-repeat: no-repeat;
     background-size: cover;
     color: #0ef;
-}h1{
+}
+h1{
     margin-left: 3%;
     margin-top: 5%;
     font-family: fantasy ;
@@ -24,9 +25,11 @@ body{
 }
 
 .card img {
+  
     display: block;
-    max-width: 100%;
-    height: auto;
+    padding: 20px 100px 100px 20px;
+    max-width: 90%;
+    height: 90%;
 }
 
 .card div {
