@@ -1,39 +1,149 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>About</title>
+    <link rel="stylesheet" href="theme.css">
+    <link rel="stylesheet" href="navbar.css">
+    <link rel="stylesheet" href="about.css">
+    <style>
+        body{
+            background-color: #1f242d;
+            color: rgb(16, 172, 184);
+            font-size: 25px;
+        }
+      .table-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+table {
+    border-radius: 25px;
+  margin-top: 50px;
+  border-collapse: collapse;
+  width: 80%;
+}
+
+caption {
+  font-size: 34px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+thead {
+  background-color: #1f242d;
+  color: whitesmoke;
+}
+
+th,
+td {
+  text-align: left;
+  padding: 12px;
+}
+
+th {
+  font-weight: bold;
+}
+
+caption:hover {
+  background-color: #fffdfd;
+}
+  
+
+tbody tr:hover {
+  background-color: #fffdfd;
+}
+
+    </style>
 </head>
-<!-- <link rel="stylesheet" href="style.css"> -->
-<link rel="stylesheet" href="theme.css">
-<link rel="stylesheet" href="navbar.css">
-<style>
-    body
-    {
-        background-color: #1f242d;
-        color: aqua;
-    }
-    h1
-    {
-        text-align: center;
-        margin-top: 10%;
-        font-size: 30px;
-    }
-</style>
 <body>
     <div>
         <header class="header">
-          <a href="#" class="logo">Portfolio.</a>
-          <nav class="navbar">
-              <a href="index.html" style="--i:1" >Home</a>
-              <a href="about.html" style="--i:2" class="active">About</a>
-              <a href="skill.html" style="--i:3" >Skills</a>
-              <a href="portfolio.html" style="--i:4"  >Portfolio</a>
-              <a href="contanct.html" style="--i:5" >Contact</a>
-          </nav>
-      </header>
+            <a href="#" class="logo">Portfolio.</a>
+            <nav class="navbar">
+                <a href="index.html" style="--i:1" >Home</a>
+                <a href="about.html" style="--i:2" class="active">About</a>
+                <a href="skill.html" style="--i:3" >Skills</a>
+                <a href="portfolio.html" style="--i:4"  >Portfolio</a>
+                <a href="contanct.html" style="--i:5" >Contact</a>
+            </nav>
+        </header>
+    </div>
+    <div class="table-container">
+        <table>
+          <caption>Education Qualification</caption>
+          <thead>
+            <tr>
+              <th>Qualification</th>
+              <th>Institution</th>
+              <th>Year of Completion</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+                <td>10 <sup>th</sup></td>
+                <td>G.H.S.E.B</td>
+                <td>2015</td>
+            </tr>
+            <tr>
+              <td>Bachelor's Degree</td>
+              <td>DDU</td>
+              <td>2026</td>
+            </tr>
+          </tbody>
+        </table>
+      
+        <table>
+          <caption>Work Experience</caption>
+          <thead>
+            <tr>
+              <th>Job Title</th>
+              <th>Company</th>
+              <th>Duration</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Software Engineer</td>
+              <td>Google</td>
+              <td>2015-2021</td>
+            </tr>
+            <tr>
+              <td>Senior Software Engineer</td>
+              <td>Microsoft Company</td>
+              <td>2021-Present</td>
+            </tr>
+          </tbody>
+        </table>
       </div>
-    <h1>this is my about page </h1>
-</body>
-</html>
+      <div class="carousel-container">
+        <h2>Explore Gallery</h2>
+        <div class="carousel">
+          <div class="carousel-item">
+            <img src="ok.jpg" alt="Image 1">
+          </div>
+          <div class="carousel-item">
+            <img src="ok2.jpeg" alt="Image 2">
+          </div>
+          <div class="carousel-item">
+            <img src="ok3.jpeg" alt="Image 3">
+          </div>
+          <div class="carousel-item">
+            <img src="ok3.jpeg" alt="Image 4">
+          </div>
+          <div class="carousel-item">
+            <img src="ok2.jpeg" alt="Image 5">
+          </div>
+          <div class="carousel-item">
+            <img src="ok.jpg" alt="Image 6">
+          </div>
+        </div>
+      </div>
+      
+        <div class="footer" >
+            <p>Created by <a href="https://www.linkedin.com/in/abhishek-kumar-4a1b3b1b0/">Lakhman parmar</a> | &copy; 2023</p>      
+    </body>
+    </html>
