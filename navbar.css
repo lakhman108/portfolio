@@ -29,7 +29,8 @@
 .navbar a:hover,.navbar a.active{ 
     color: #0ef;
 }
-.logo{
+
+.logo {
     font-size: 25px;
     font-weight: 600;
     color: #fff;
@@ -37,7 +38,7 @@
     cursor: default;
     opacity: 0;
     animation: slide-right 1s ease forwards;
-}
+  }
 @keyframes slide-right{
     0%{
         opacity: 0;

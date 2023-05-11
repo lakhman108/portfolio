@@ -1,28 +1,178 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <title>Card Example</title>
+  <link rel="stylesheet" href="navbar.css">
+  <style>
+    body{
+      background-color: #1f242d;
+    }
+   .card-container {
+    margin-top: 100px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  padding: 50px;
+  background-color: #1f242d;
+}
 
-<link rel="stylesheet" href="Achivments.css">
-<link rel="stylesheet" href="theme.css">
-<link rel="stylesheet" href="navbar.css">
+.card {
+  position: relative;
+  width: 300px;
+  height: 400px;
+  background-color: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
 
+
+.card img {
+  width: 100%;
+  height: 90%;
+  object-fit: cover;
+}
+
+.card h3 {
+  font-size: 24px;
+  margin: 20px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+.pagination {
+    
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+}
+
+.pagination a {
+  display: inline-block;
+  padding: 10px 20px;
+  margin: 0 10px;
+  font-size: 18px;
+  color: #0ef;
+  text-decoration: none;
+  border: 1px solid #0ef;
+  border-radius: 5px;
+}
+
+.pagination a.active {
+  background-color: #0ef;
+  color: white;
+  border-color: #0ef;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  color: #0ef;
+   box-shadow: 0 0 50px  #0ef;
+}
+  </style>
 </head>
 <body>
-    <div>
-        <header class="header">
-          <a href="#" class="logo">Achivments.</a>
-          <nav class="navbar">
-              <a href="index.html" style="--i:1" >Home</a>
-              <a href="about.html" style="--i:2" >About</a>
-              <a href="skill.html" style="--i:3" >Skills</a>
-              <a href="Achivments.html" style="--i:4"  class="active">Achivments</a>
-              <a href="contanct.html" style="--i:5" >Contact</a>
-          </nav>
-      </header>
-      </div>
-   
+  <div>
+    <header class="header">
+      <a href="#" class="logo">Achivments.</a>
+      <nav class="navbar">
+          <a href="index.html" style="--i:1" >Home</a>
+          <a href="about.html" style="--i:2" >About</a>
+          <a href="skill.html" style="--i:3" >Skills</a>
+          <a href="Achivments.html" style="--i:4"  class="active">Achivments</a>
+          <a href="contanct.html" style="--i:5" >Contact</a>
+      </nav>
+  </header>
+  </div>
+
+  <div class="card-container">
+    <div class="card">
+      <img src="page1.1.jpg" alt="Card 1">
+      <h3>Card 1</h3>
+    </div>
+    <div class="card">
+      <img src="page1.2.jpg" alt="Card 2">
+      <h3>Card 2</h3>
+    </div>
+    <div class="card">
+      <img src="page1.jpg" alt="Card 3">
+      <h3>Card 3</h3>
+    </div>
+    <div class="card">
+      <img src="page2.jpg" alt="Card 4">
+      <h3>Card 4</h3>
+    </div>
+    <div class="card">
+      <img src="page2.2.jpg" alt="Card 5">
+      <h3>Card 5</h3>
+    </div>
+    <div class="card">
+      <img src="pysique.jpg" alt="Card 6" >
+      <h3>Card 6</h3>
+    </div>
+    <div class="card">
+      <img src="https://via.placeholder.com/300x200.png" alt="Card 7">
+      <h3>Card 7</h3>
+    </div>
+    <div class="card">
+      <img src="https://via.placeholder.com/300x200.png" alt="Card 8">
+      <h3>Card 8</h3>
+    </div>
+    <div class="card">
+      <img src="https://via.placeholder.com/300x200.png" alt="Card 9">
+      <h3>Card 9</h3>
+    </div>
+  </div>
+
+  <div class="pagination">
+    <a href="#" class="active">1</a>
+    <a href="#">2</a>
+    <a href="#">3</a>
+  </div>
+
+  <script>
+    const cardsPerPage = 3;
+    const cards = document.querySelectorAll('.card');
+    const numPages = Math.ceil(cards.length / cardsPerPage);
+    const pagination = document.querySelector('.pagination');
+
+    // Hide all cards except the first page
+    for (let i = cardsPerPage; i < cards.length; i++) {
+      cards[i].style.display = 'none';
+    }
+
+    // Add click event listener to pagination links
+    pagination.addEventListener('click', (e) => {
+      e.preventDefault();
+      const currentPage = document.querySelector('.pagination a.active');
+      const nextPage = e.target;
+      const nextPageNum = parseInt(nextPage.innerText);
+      
+      // If user clicked on active link, do nothing
+      if (nextPage === currentPage) {
+        return;
+      }
+
+      // Update active link and show/hide cards
+      currentPage.classList.remove('active');
+      nextPage.classList.add('active');
+      for (let i = 0; i < cards.length; i++) {
+        if (i < nextPageNum * cardsPerPage && i >= (nextPageNum - 1) * cardsPerPage) {
+          cards[i].style.display = 'block';
+        } else {
+          cards[i].style.display = 'none';
+        }
+      }
+    });
+  </script>
 </body>
 </html>
