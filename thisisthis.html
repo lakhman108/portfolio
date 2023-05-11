@@ -1,0 +1,111 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <link rel="stylesheet" href="navbar.css">
+<style>
+#div1 {
+  width: 150px;
+  height: 150px;
+  display:inline-block;
+position: absolute;
+background-color: aliceblue;
+top: 250px;
+left: 150px;
+  border: 2px solid #aaaaaa;
+}
+#div2 {
+  width: 150px;
+  height: 150px;
+  position: absolute;
+  background-color: aliceblue;
+  top: 250px;
+  left: 300px;
+  display:inline-block;
+  border: 2px solid #aaaaaa;
+}
+#div3 {
+  width: 150px;
+  height: 150px;
+  position: absolute;
+  background-color: aliceblue;
+  top: 400px;
+  left: 150px;
+  border: 2px solid #aaaaaa;
+}
+#div4 {
+  width: 150px;
+  height: 150px;
+  position: absolute;
+  background-color: aliceblue;
+  top: 400px;
+  left: 300px;
+
+  display:inline-block;
+  border: 2px solid #aaaaaa;
+}
+.img{
+    padding: 5px;
+    margin-left: 50px;
+}
+</style>
+<script>
+function allowDrop(ev) {
+  ev.preventDefault();
+}
+
+function drag(ev) {
+  ev.dataTransfer.setData("text", ev.target.id);
+}
+
+function drop(ev) {
+  ev.preventDefault();
+  var data = ev.dataTransfer.getData("text");
+  ev.target.appendChild(document.getElementById(data));
+}
+</script>
+</head>
+<div>
+  <header class="header">
+    <a href="#" class="logo">Achivments.</a>
+    <nav class="navbar">
+        <a href="index.html" style="--i:1" >Home</a>
+        <a href="about.html" style="--i:2" >About</a>
+        <a href="skill.html" style="--i:3" >Skills</a>
+        <a href="Achivments.html" style="--i:4"  class="active">Achivments</a>
+        <a href="contanct.html" style="--i:5" >Contact</a>
+    </nav>
+</header>
+<br><br><br><br>
+</div>
+<body style="background-color: #1f242d;">
+
+<!-- <p>Drag the W3Schools image into the rectangle:</p> -->
+
+    <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+<div id="div2" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+
+
+
+<div id="div3" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+<div id="div4" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+<br>
+<div class="img">
+    <img id="drag1" src="ok.jpg" draggable="true" ondragstart="drag(event)" width="150" height="150">
+<img id="drag2" src="ok2.jpeg" draggable="true" ondragstart="drag(event)" width="150" height="150">
+<img id="drag3" src="ok3.jpeg" draggable="true" ondragstart="drag(event)" width="150" height="150">
+<img id="drag4" src="ok2.jpeg" draggable="true" ondragstart="drag(event)" width="150" height="150">
+
+
+
+
+</div>
+<div class="btn">
+   <a href="filedragdrop.html"> <button style="padding: 50ox; margin-left: 700px; margin-top: 300px; background-color: #16a34a; width: 80px; height: 30px; border-radius: 10px;">submit</button>
+   </a>
+</div>
+
+
+</body>
+
+
+</html>

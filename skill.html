@@ -6,11 +6,15 @@
     <title>Document</title>
 </head>
 <link rel="stylesheet" href="navbar.css">
-<link rel="stylesheet" href="style.css">
+
+<link rel="stylesheet" href="skill.css">
+<style>
+  
+</style>
 <body>
     <div>
         <header class="header">
-          <a href="#" class="logo">Achivments.</a>
+          <a href="#" class="logo">Introducing Myself</a>
           <nav class="navbar">
               <a href="index.html" style="--i:1" >Home</a>
               <a href="about.html" style="--i:2" >About</a>
@@ -21,8 +25,66 @@
       </header>
       </div>
    
-    <script src="https://unpkg.com/typed.js@2.0.14/dist/typed.umd.js"></script>
-    <script src="script.js"></script>
+<div class="home">
+   <div class="home-content">
+    <h3>Hello Friends</h3>
+    <h1>I Am A Student</h1>
+    <h3>And My Skills Are  <span class="multiple-text"></span></h3>
+    <!-- <p>chalo ok done</p> -->
+    <h1>checkout some of my Projects</h1>
+</div>
+</div>
 
+<div class="card-container">
+    <div class="card">
+      <div class="card-image">
+        <img src="puzzel.jpg" alt="Card Image">
+      </div>
+      <div class="card-content">
+        <h3>Puzzel</h3>
+       <p>Click Here To Play Puzzel !</p>
+        
+      </div>
+    </div>
+    <div class="card" onclick="getLocation()">
+      <div class="card-image">
+        <img src="location.png" alt="Card Image">
+      </div>
+      <div class="card-content">
+        <h3>Know Your Location !</h3>
+        <p>Click Here To Know Your Longitude & Lantitude</p>
+        <div id="output"></div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-image">
+        <img src="food.png" alt="Card Image">
+      </div>
+      <div class="card-content">
+        <h3>Token Management System</h3>
+        <p>Project In Which I Used PHP,SQL,HTML,CSS,HACK </p>
+      </div>
+    </div>
+  </div>
+
+
+    <script src="https://unpkg.com/typed.js@2.0.14/dist/typed.umd.js"></script>
+    <script src="animation.js"></script>
+    <script>
+        var output = document.getElementById("output");
+        
+        function getLocation() {
+          if (navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition(showPosition);
+          } else {
+            output.innerHTML = "Geolocation is not supported by this browser.";
+          }
+        }
+        
+        function showPosition(position) {
+          output.innerHTML = "Latitude: " + position.coords.latitude + 
+            "<br>Longitude: " + position.coords.longitude;
+        }
+      </script>
 </body>
 </html>
