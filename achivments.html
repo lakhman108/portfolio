@@ -26,7 +26,7 @@
   background-color: #fff;
   border-radius: 10px;
   overflow: hidden;
-  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+  box-shadow: 2px 2px 10px #0ef;
   transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
@@ -38,6 +38,7 @@
 }
 
 .card h3 {
+  opacity: 0;
   font-size: 24px;
   margin: 20px;
   position: absolute;
@@ -45,9 +46,11 @@
   left: 0;
   right: 0;
   padding: 20px;
-  background-color: rgba(255, 255, 255, 0.8);
+  background-color: #1f242d;
 }
-
+.card-container:hover .card h3 {
+  opacity: 0.8;
+}
 .pagination {
     
   display: flex;
@@ -75,8 +78,13 @@
 
 .card:hover {
   transform: translateY(-5px);
+  border: 2px solid #0ef;
   color: #0ef;
    box-shadow: 0 0 50px  #0ef;
+}
+html
+{
+    scroll-behavior: smooth;
 }
   </style>
 </head>
@@ -96,40 +104,40 @@
 
   <div class="card-container">
     <div class="card">
-      <img src="page1.1.jpg" alt="Card 1">
-      <h3>Card 1</h3>
+      <img src="page1.2.jpg" alt="Card 1">
+      <h3>Silver Medal in 10<sup>th</sup></h3>
     </div>
     <div class="card">
-      <img src="page1.2.jpg" alt="Card 2">
-      <h3>Card 2</h3>
+      <img src="page2.jpg" alt="Card 2">
+      <h3>Scored 99.69 </h3>
     </div>
     <div class="card">
-      <img src="page1.jpg" alt="Card 3">
-      <h3>Card 3</h3>
+      <img src="12th.JPG" alt="Card 3">
+      <h3>A1 in 12<sup>th</sup></h3>
     </div>
     <div class="card">
-      <img src="page2.jpg" alt="Card 4">
-      <h3>Card 4</h3>
+      <img src="page1.jpg" alt="Card 4">
+      <h3>Wining First Price On Teachr's Day</h3>
     </div>
     <div class="card">
-      <img src="page2.2.jpg" alt="Card 5">
-      <h3>Card 5</h3>
+      <img src="IMG_5881.jpg" alt="Card 5">
+      <h3>2<sup>nd</sup>In 8<sup>th</sup>Standard</h3>
     </div>
     <div class="card">
-      <img src="pysique.jpg" alt="Card 6" >
-      <h3>Card 6</h3>
+      <img src="IMG_5882.jpg" alt="Card 6" >
+      <h3>2<sup>nd</sup>In 9<sup>th</sup>Standard</h3>
     </div>
     <div class="card">
       <img src="https://via.placeholder.com/300x200.png" alt="Card 7">
-      <h3>Card 7</h3>
+      <h3>Published a Research Paper on Quantum Computing</h3>
     </div>
     <div class="card">
       <img src="https://via.placeholder.com/300x200.png" alt="Card 8">
-      <h3>Card 8</h3>
+      <h3>Volunteered for a Green Initiative Program</h3>
     </div>
     <div class="card">
       <img src="https://via.placeholder.com/300x200.png" alt="Card 9">
-      <h3>Card 9</h3>
+      <h3>Organized a Fundraising Campaign for Children's Education</h3>
     </div>
   </div>
 
@@ -173,6 +181,9 @@
         }
       }
     });
+  </script>
+  <script>
+
   </script>
 </body>
 </html>

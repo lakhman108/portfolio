@@ -1,0 +1,60 @@
+<style>
+video::-webkit-media-controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 5px;
+  border-radius: 5px;
+}
+
+video::-webkit-media-controls-enclosure {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+video::-webkit-media-controls-play-button {
+  background-color: transparent;
+  border: none;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+video::-webkit-media-controls-timeline-container {
+  height: 5px;
+}
+
+video::-webkit-media-controls-timeline {
+  height: 100%;
+  background-color: white;
+}
+
+video::-webkit-media-controls-timeline-track {
+  background-color: #0ef;
+}
+
+video::-webkit-media-controls-fullscreen-button {
+  background-color: transparent;
+  border: none;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+}
+</style>
+
+<div class="flip-card">
+    <div class="flip-card-inner">
+      <div class="flip-card-front">
+        <h2>Front of Card</h2>
+      </div>
+      <div class="flip-card-back">
+        <h2>Back of Card</h2>
+        <video controls>
+          <source src="trendy.mp4" type="video/mp4">
+        </video>
+      </div>
+    </div>
+  </div>

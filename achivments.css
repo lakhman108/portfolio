@@ -17,9 +17,10 @@ h1{
     width: 30%;
    
     margin: 1%;
-    background-color: #fff;
-    border: 1px solid #ddd;
+    background-color: #1f242d;
+    border: 1px solid #0ef;
     box-shadow: 0 2px 2px rgba(0,0,0,0.1);
+    box-shadow: 1px 1px 10px #0ef;
     border-radius: 5px;
     overflow: hidden;
 }
