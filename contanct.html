@@ -109,13 +109,13 @@
   <br><br>
 
 
-    <form  action="action_page.php"  method="post">
+
      <form  action="action_page.php"  method="post">
         <h1 class="h1"><b>Feedback Form</b></h1>
         <fieldset>
             <div>
                 <label for="fname" >Name:</label>
-                <input type="text" id="fname" name="fname" placeholder="fname_lastname" ><br>
+                <input type="text" id="fname" name="fname" placeholder="fname_lastname" required><br>
             </div>
             <br>
             <div>
@@ -132,15 +132,15 @@
             <br>
             <div>
                 <label for="number">Mobile No:</label>
-                <input type="number" id="number" name="number" placeholder="Your Mobile Number" maxlength="10">
+                <input type="number" id="number" name="number" placeholder="Your Mobile Number" maxlength="10" required>
             </div>
             <div><br>
                 <label for="email">Email:</label>
-                <input type="email" id="email" name="email" placeholder="....@email.com">
+                <input type="email" id="email" name="email" placeholder="....@email.com" required>
             </div><br>
             <div>
                 <label for="feedback">Feedback:</label>
-                <textarea id="feedback" name="feedback" placeholder="Give your valuable feedback here"></textarea>
+                <textarea id="feedback" name="feedback" placeholder="Give your valuable feedback here" required></textarea>
             </div>
 
             <div >
@@ -160,14 +160,12 @@
             </div>
 
 
-            <button type="submit" >Submit</button>
+            <button type="submit" required>Submit</button>
             <button type="reset" style="margin-left: 20px;">Reset</button>
         </fieldset>
     </form>
     
-    <div class="toggle-switch">
-      <button id="my-theme-toggle" class="theme-toggle">Change Theme</button>
-  </div>
+    
   <script src="theme.js"></script>
 
 
