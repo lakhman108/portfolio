@@ -42,7 +42,7 @@
 .light-theme #topBtn:hover{
   background: #7b68ee;
 }
-  .light-theme .social-media a{
+  .light-theme .social-media a,.light-theme .pagination a{
     color:  #ab80d5;
     border: 2px solid  #7b68ee;
   }
@@ -61,4 +61,11 @@ box-shadow: 0 0 20px  #ab80d5;
     background: #fff;
     box-shadow: 0 0 10px  #ab80d5;
    }
+  
+  
+  .light-theme .pagination a.active {
+    background-color: #ab80d5;
+    color: white;
+    border-color: #ab80d5;
+  }
   
