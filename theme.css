@@ -2,11 +2,63 @@
     background-color: #fff;
     color: #000;
   }
+   
+  .light-theme {
+    background-color: #fff;
+    color: #000;
+  }
+  .light-theme h3,  .light-theme h1{
+    color: #7b68ee;
+  }
+  .light-theme thead{
+    background-color: #fff;
+    color: #ab80d5;
+  }
+  .light-theme tbody tr:hover {
+    background-color: #ab80d5;
+  }
+ .light-theme .card:hover,.light-theme .card:hover{
+  border: 2px solid #ab80d5;
+  color: #ab80d5;
+  box-shadow: 0 0 50px #ab80d5;
+}
+.light-theme button{
+  background: #ab80d5;
+  color: #fff;
+  border: 2px solid #ab80d5;
+}
+  .light-theme .navbar a:hover,.light-theme .navbar a, .light-theme .navbar a,.light-theme .logo,.light-theme .home-content h3 span{
+    color: #ab80d5;
+    
+  }
+  .light-theme .navbar a:hover,.light-theme .navbar a.active,.light-theme p{ 
+    color: #7b68ee;
+}
+.light-theme #topBtn{
+  background: #ab80d5;
+  color: #fff;
+  border: 2px solid #ab80d5;
+}
+.light-theme #topBtn:hover{
+  background: #7b68ee;
+}
+  .light-theme .social-media a{
+    color:  #ab80d5;
+    border: 2px solid  #7b68ee;
+  }
+   .light-theme .social-media a:hover{
+background:  #7b68ee;
+box-shadow: 0 0 20px  #ab80d5;
+
+   }
+   .light-theme fieldset{
+    border: 2px solid #ab80d5;
+   }
+   .light-theme fieldset:hover{
+    box-shadow: 0 0 50px #ab80d5;
+   }
+   .light-theme .btn2,.light-theme .card,.light-theme .card-container{
+    background: #fff;
+    box-shadow: 0 0 10px  #ab80d5;
+   }
   
-  .dark-theme {
-    background-color: #000;
-    color: #fff;
-  }
-  .header{
-    color: #000000;
-  }

@@ -11,35 +11,19 @@ background-color: rgb(248, 248, 248);
 color: rgb(7, 9, 7);
 
    } */
-   .light-theme {
-    background-color: #fff;
-    color: #000;
-  }
   
-  .light-theme .navbar a:hover,.light-theme .navbar a, .light-theme .navbar a,.light-theme .logo,.light-theme .home-content h3 span{
-    color: #5c9faf;
-    
-  }
-  .light-theme .navbar a:hover,.navbar a.active{ 
-    color: #0ef;
-}
-  .light-theme .social-media a{
-    color: rgb(44, 57, 199);
-    border: 2px solid rgba(55, 74, 137, 0.676);
-  }
-   .light-theme .social-media a:hover{
-background: rgba(55, 74, 137, 0.676);
-box-shadow: 0 0 20px rgba(55, 74, 137, 0.676);
-
-   }
-   .light-theme .btn2{
-    background: #fff;
-    box-shadow: 0 0 10px  #5c9faf;
-   }
 
 body{
    background-color: #1f242d;
    color: #fff;
+}
+p{
+    font-size: 16px;
+    line-height: 26px;
+    color: #fff;
+    opacity: 0;
+    animation: slide-left 1s ease forwards;
+    animation-delay: 1s;
 }
 .header{
      position: fixed;
@@ -88,7 +72,7 @@ body{
 .home-content h1{
     font-size: 56px;
     font-weight: 700;
-    margin: -3px 0;
+    margin: -0.03% 0;
     opacity: 0;
     animation: slide-right 1s ease forwards;
     animation-delay: 1s;
@@ -124,7 +108,7 @@ display:inline-flex;
 justify-content: center;
 align-items: center;
 width: 40px;
-height: 40px;
+height:  40px;
 background: transparent;
 border: 2px solid #0ef;
 border-radius: 50%; 

@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Animated Achievements Website with CSS</title>
+  <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css">
+  <style>
+    /* Common Styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: #1f242d;
+      color: #fff;
+      font-family: 'Open Sans', sans-serif;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    /* Header */
+    .header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      padding: 20px 0;
+      background-color: rgba(0, 0, 0, 0.7);
+      z-index: 100;
+    }
+
+    .header .logo {
+      font-size: 25px;
+      font-weight: 600;
+      color: #fff;
+      text-decoration: none;
+    }
+
+    .header .navbar {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      list-style: none;
+    }
+
+    .header .navbar li {
+      margin-left: 15px;
+    }
+
+    .header .navbar a {
+      font-size: 18px;
+      font-weight: 500;
+      color: #fff;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+
+    .header .navbar a:hover,
+    .header .navbar a.active {
+      color: #0ef;
+    }
+
+    /* Home Section */
+    .home {
+      position: relative;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      padding-top: 100px;
+    }
+
+    .home .home-content {
+      max-width: 600px;
+      margin-right: auto;
+    }
+
+    .home .home-content h3 {
+      font-size: 32px;
+      font-weight: 700;
+      margin-bottom: 30px;
+      color: #fff;
+    }
+
+    .home .home-content h1 {
+      font-size: 56px;
+      font-weight: 700;
+      margin-bottom: 20px;
+      color: #fff;
+    }
+
+    .home .home-content p {
+      font-size: 16px;
+      margin-bottom: 40px;
+      color: #fff;
+    }
+
+    .home .home-content .social-media {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 40px;
+    }
+
+    .home .home-content .social-media a {
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      width: 40px;
+      height: 40px;
+      background: transparent;
+      border: 2px solid #0ef;
+      border-radius: 50%;
+      font-size: 30px;
+      color: #0ef;
+      text-decoration: none;
+      margin: 0 10px;
+      transition: 0.5s;
+    }
+
+    .home .home-content .social-media a:hover {
+      background: #0ef;
+      color: #fff;
+    }
+
+    /* Achievements Section */
+    .achievements {
+      padding: 100px 0;
+      background-color: #fff;
+    }
+
+    .achievements .title {
+      text-align: center;
+      margin-bottom: 60px;
+    }
+
+    .achievements .title h2 {
+      font-size: 36px;
+      font-weight: 700;
+      color: #333;
+    }
+
+    .achievements .title p {
+      font-size: 18px;
+      color: #777;
+    }
+
+    .achievements .ach-container {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+
+    .achievements .ach-container .flip-card {
+      width: 200px;
+      height: 300px;
+      margin-bottom: 40px;
+      perspective: 1000px;
+      cursor: pointer;
+    }
+
+    .achievements .ach-container .flip-card-inner {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      transition: transform 0.6s;
+      transform-style: preserve-3d;
+    }
+
+    .achievements .ach-container .flip-card:hover .flip-card-inner {
+      transform: rotateY(180deg);
+    }
+
+    .achievements .ach-container .flip-card-front,
+    .achievements .ach-container .flip-card-back {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      backface-visibility: hidden;
+    }
+
+    .achievements .ach-container .flip-card-front {
+      background-color: #ddd;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .achievements .ach-container .flip-card-front img {
+      max-width: 100%;
+      max-height: 100%;
+    }
+
+    .achievements .ach-container .flip-card-back {
+      background-color: #2980b9;
+      color: #fff;
+      transform: rotateY(180deg);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 10px;
+      text-align: center;
+    }
+
+    .achievements .ach-container .flip-card-back h3 {
+      font-size: 18px;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+
+    .achievements .ach-container .flip-card-back p {
+      font-size: 14px;
+    }
+
+    /* Media Queries */
+    @media screen and (max-width: 1200px) {
+      .container {
+        padding: 0 15px;
+      }
+    }
+
+    @media screen and (max-width: 992px) {
+      .home .home-content h3 {
+        font-size: 28px;
+      }
+      .home .home-content h1 {
+        font-size: 48px;
+      }
+    }
+
+    @media screen and (max-width: 768px) {
+      .home .home-content h3 {
+        font-size: 24px;
+      }
+      .home .home-content h1 {
+        font-size: 40px;
+      }
+      .home .home-content p {
+        font-size: 14px;
+      }
+      .home .home-content .social-media a {
+        width: 32px;
+        height: 32px;
+        font-size: 24px;
+        margin: 0 8px;
+      }
+      .achievements .title h2 {
+        font-size: 32px;
+      }
+      .achievements .title p {
+        font-size: 16px;
+      }
+      .achievements .ach-container .flip-card {
+        width: 150px;
+        height: 225px;
+      }
+    }
+
+    @media screen and (max-width: 576px) {
+      .home .home-content h3 {
+        font-size: 20px;
+      }
+      .home .home-content h1 {
+        font-size: 32px;
+      }
+      .home .home-content p {
+        font-size: 12px;
+      }
+      .home .home-content .social-media a {
+        width: 28px;
+        height: 28px;
+        font-size: 20px;
+        margin: 0 6px;
+      }
+      .achievements .ach-container .flip-card {
+        width: 120px;
+        height: 180px;
+      }
+      .achievements .title h2 {
+        font-size: 28px;
+      }
+      .achievements .title p {
+        font-size: 14px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="container">
+      <a href="#" class="logo">ok</a>
+      <ul class="navbar">
+        <li><a href="#" class="active">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- Home Section -->
+  <section class="home">
+    <div class="container">
+      <div class="home-content">
+        <h3>Welcome to our website</h3>
+        <h1>We help you achieve success</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ac magna enim. Morbi iaculis metus in dolor
+          fringilla, ut lobortis enim laoreet.</p>
+        <div class="social-media">
+          <a href="#"><i class="bx bxl-facebook"></i></a>
+          <a href="#"><i class="bx bxl-twitter"></i></a>
+          <a href="#"><i class="bx bxl-instagram"></i></a>
+          <a href="#"><i class="bx bxl-linkedin"></i></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Achievements Section -->
+  <section class="achievements">
+    <div class="container">
+      <div class="title">
+        <h2>Our Achievements</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      </div>
+      <div class="ach-container">
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img src="image1.jpg" alt="Image 1">
+            </div>
+            <div class="flip-card-back">
+              <h3>Achievement 1</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </div>
+          </div>
+        </div>
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img src="image2.jpg" alt="Image 2">
+            </div>
+            <div class="flip-card-back">
+              <h3>Achievement 2</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </div>
+          </div>
+        </div>
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img src="image3.jpg" alt="Image 3">
+            </div>
+            <div class="flip-card-back">
+              <h3>Achievement 3</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Scripts -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script>
+    // Add your custom script here
+  </script>
+</body>
+
+</html>
