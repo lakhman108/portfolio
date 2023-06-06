@@ -17,3 +17,7 @@ const selectedTheme = localStorage.getItem('selectedTheme');
 if (selectedTheme) {
   body.classList.add(selectedTheme);
 }
+function toggleNavbar() {
+  var navbar = document.getElementById('navbar');
+  navbar.classList.toggle('active');
+}

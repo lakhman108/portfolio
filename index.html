@@ -6,14 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>animated Achivments website with css</title>
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>  
-    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="ok.jpg" type="image/x-icon">
+  
     <link rel="stylesheet" href="navbar.css">
+    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="theme.css">
 </head>
 <body>
     <header class="header">
         <a href="#" class="logo">Introducing Myself</a>
-        <nav class="navbar">
+        <nav class="navbar" id="navbar">
             <a href="index.html" style="--i:1" class="active">Home</a>
             <a href="about.html" style="--i:2">About</a>
             <a href="skill.html" style="--i:3" >Skills</a>
@@ -21,6 +23,11 @@
             <a href="contanct.html" style="--i:5">Feedback</a>
             <a  style="--i:6" id="my-theme-toggle">Theme</a>
         </nav>
+        <div class="toggle-nav" onclick="toggleNavbar()">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
     </header>
   
     <section class="home">
@@ -41,7 +48,7 @@
             <div class="flip-card">
                 <div class="flip-card-inner">
                   <div class="flip-card-front">
-                    <img src="ok.jpg" alt="Avatar" style="width:250px;height:350px;">
+                    <img src="ok.jpg" alt="Avatar" >
                   </div>
                   <div class="flip-card-back">
                     <h1>Parmar Lakhman</h1> 
@@ -55,5 +62,6 @@
     <script src="script.js"></script>
     <script src="theme.js"></script>
 
+   
 </body>
 </html>
