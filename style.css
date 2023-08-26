@@ -85,7 +85,7 @@ p{
    
 }
 .home-content h3 span{
-    color: #0ef;
+    color: #00ffdb;
 }
 .home-content h3:nth-of-type(2){
     margin: 30px;
@@ -100,10 +100,10 @@ align-items: center;
 width: 40px;
 height:  40px;
 background: transparent;
-border: 2px solid #0ef;
+border: 2px solid #00ffdb;
 border-radius: 50%; 
 font-size: 30px;
-color: #0ef;
+color: #00ffdb;
 text-decoration: none;
 margin: 30px 15px 30px 0px;
 transition: 0.5s ease;
@@ -112,10 +112,10 @@ opacity: 0;
     animation-delay: calc(.2s * var(--i));
 }
 .social-media a:hover{
-    background: #0ef;
+    background: #00ffdb;
     color: #1f242d;
     /* most important for hovereffect */
-    box-shadow: 0 0 20px #0ef;
+    box-shadow: 0 0 20px #00ffdb;
 }
 .my-theme-toggle {
     position: relative;
@@ -134,7 +134,7 @@ opacity: 0;
        padding: 5px;
     background: #56b3ba;
     border-radius: 20px;
-    box-shadow: 0 0 10px #0ef;
+    box-shadow: 0 0 10px #00ffdb;
     color: #263652;
     letter-spacing: 1px;
     text-decoration: none;
@@ -144,9 +144,9 @@ opacity: 0;
 .btn2{
     display: inline-block;
     padding: 12px 28px;
-    background: #0ef;
+    background: #00ffdb;
     border-radius: 50px;
-    box-shadow: 0 0 10px #0ef;
+    box-shadow: 0 0 10px #00ffdb;
     color: #1f242d;
     letter-spacing: 1px;
     text-decoration: none;
